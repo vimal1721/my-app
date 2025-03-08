@@ -6,7 +6,7 @@ pipeline {
 
     environment {
         SONARQUBE_URL = 'http://172.22.192.181:9000'
-        SONARQUBE_AUTH = 'sqa_9f00126dad0650a78e35e506c461bc2fc8dc3edf'
+        SONARQUBE_AUTH = 'squ_cd935e4074945d343cbb7c40fd34fe4b2169c009'
         DOCKER_IMAGE = 'myapp'
         DOCKER_TAG = 'latest'
     }
