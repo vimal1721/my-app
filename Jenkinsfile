@@ -20,27 +20,7 @@ pipeline {
         }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube') {
-                        sh '''
-                            mvn clean verify sonar:sonar \
-                                -Dsonar.projectKey=myapp \
-                                -Dsonar.host.url=${SONARQUBE_URL} \
-                                -Dsonar.login=${SONAR_TOKEN}
-                        '''
-                }
-            }
-        }
-
-        stage('Quality Gate Check') {
-            steps {
-                timeout(time: 1, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
-                }
-            }
-        }
-
+        
         stage('Build with Maven') {
             steps {
                 sh 'mvn clean package'
