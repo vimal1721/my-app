@@ -11,8 +11,10 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/your-repo.git'
-            }
+            git branch: 'main', 
+                credentialsId: '0d368b67-8c74-4f51-90ac-df6cd2b8c37a', 
+                url: 'git@github.com:vimal1721/my-app.git'
+        }
         }
 
         stage('SonarQube Analysis') {
