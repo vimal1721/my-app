@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SONARQUBE_URL = 'http://localhost:9000'
-        SONARQUBE_AUTH = 'your-sonarqube-token'
+        SONARQUBE_AUTH = 'squ_9e0867ba59e770c8886747cb84d0252f92eb6d91'
         DOCKER_IMAGE = 'myapp'
         DOCKER_TAG = 'latest'
     }
