@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+    maven 'Maven'
+}
 
     environment {
         SONARQUBE_URL = 'http://localhost:9000'
